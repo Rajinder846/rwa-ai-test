@@ -26,7 +26,7 @@ jobs:
       GEMINI_TEMPERATURE: "0"
       GEMINI_MAX_RETRIES: "0"
       REDIS_URL: "redis://localhost:6379/0"
-      RWA_API_URL: "http://localhost:3000"
+      RWA_API_URL: "https://development.tokenitize.com/api"
       LOG_LEVEL: "WARNING"
 
     steps:
