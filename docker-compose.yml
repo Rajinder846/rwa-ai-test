@@ -1,0 +1,21 @@
+services:
+  ai-platform:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: rwa-ai-platform
+
+    ports:
+      - "8000:8000"
+
+    env_file:
+      - .env
+
+    environment:
+      REDIS_URL: redis://host.docker.internal:6379/0
+
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+    restart: unless-stopped
